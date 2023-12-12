@@ -42,7 +42,6 @@ void setup() {
 void homePosition() {
   int rotationCount = 0;
 
-  // Continue homing until either sensor is interrupted or more than 360 degrees are rotated
   while (digitalRead(TOP_SENSOR_PIN) == HIGH && digitalRead(BOTTOM_SENSOR_PIN) == HIGH && rotationCount <= 4500) {
     motorStep(false, 1);
     rotationCount++;
@@ -51,7 +50,6 @@ void homePosition() {
   stopMotor();
   delay(1000);
 
-  // If both sensors are not interrupted after 360 degrees, stop the motor
   if (rotationCount > 4500) {
     Serial.println("ST,0,INIT,ERR_MAX_ROT,ED");
     stopMotor();
