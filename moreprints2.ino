@@ -35,7 +35,7 @@ void setup() {
 
   for (int i = 0; i < sizeof(RELAY_PIN) / sizeof(RELAY_PIN[0]); i++) {
     pinMode(RELAY_PIN[i], OUTPUT);
-    digitalWrite(RELAY_PIN[i], LOW);
+    digitalWrite(RELAY_PIN[i],HIGH);
   }
 }
 
