@@ -7,7 +7,6 @@ import serial
 from multiprocessing import Process, Queue
 import time
 
-
 class ArduinoController:
     def __init__(self, serial_port='/dev/ttyACM0', baud_rate=115200):
         self.serial_port = serial_port
@@ -31,8 +30,6 @@ class ArduinoController:
             return True
         else:
             return False
-
-
 class ArduinoGUI:
     def __init__(self, root):
         self.root = root
@@ -69,7 +66,6 @@ class ArduinoGUI:
             print(f"Sent command: {command}")
         else:
             messagebox.showerror("Connection Error", "Arduino not connected. Please connect first.")
-
 
 if __name__ == "__main__":
     root = tk.Tk()
