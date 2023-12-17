@@ -4,14 +4,14 @@
 
 // Arduino Pins and Constant Values
 const int EN_PIN = 5;           // enable, active when LOW
-const int DIR_PIN = 3;          // direction, (DIR_PIN, isClockwise ? LOW : HIGH)
+const int DIR_PIN = 3;          // direction, (DIR_PIN, isClockwise ? HIGH : LOW)
 const int STEP_PIN = 4;       // step, for-loop step angles
 
 const int TOP_SENSOR_PIN = 12;
 const int BOTTOM_SENSOR_PIN = 13;
 
 const int SENSOR_BACK_STEP = 4;
-const float STEP_ANGLE = 1.8; //0.36
+const float STEP_ANGLE = 1.8;
 const int STEP_DELAY = 2500;     // Initial step delay value 64
 
 const int RELAY_PIN[] = {2, 6, 7, 8};
@@ -345,7 +345,6 @@ void loop() {
 }
 
 //ST,0,MOTOR,0,60,80,ED\r\n
-
 //"ST,0,MOTOR,0,30,90,ED\r\n"
 //"ST,0,CARD_READER,1,ED\r\n"
 //"ST,0,PRINTER,1,ED\r\n"
