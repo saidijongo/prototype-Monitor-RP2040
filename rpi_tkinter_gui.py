@@ -1,4 +1,4 @@
-
+#simple GUI for testing serial commands from raspberry pi to the arduino
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
